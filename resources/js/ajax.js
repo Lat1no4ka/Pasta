@@ -22,7 +22,7 @@ $(document).ready(function() {
 
     $("#sendPaste").on("click", function() {
         let jsonArray = [];
-        jsonArray.push({paste:$(".input-paste").val()});
+        jsonArray.push({text:$(".input-paste").val()});
         jsonArray.push({title:$("#title").val()});
         jsonArray.push({lang:$("#lang").val()});
         jsonArray.push({DateOfExist:$("#DateOfExist").val()});

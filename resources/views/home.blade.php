@@ -29,6 +29,9 @@
                     <div class="paste-container">
                         <textarea class="input-paste" name="" id="" cols="" rows=""></textarea>
                         <div class="show-paste">
+                            @foreach($paste as $el)
+                            <div><a>{{ $el->Title }}</a></div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

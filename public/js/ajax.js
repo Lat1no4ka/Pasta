@@ -114,7 +114,7 @@ $(document).ready(function () {
   $("#sendPaste").on("click", function () {
     var jsonArray = [];
     jsonArray.push({
-      paste: $(".input-paste").val()
+      text: $(".input-paste").val()
     });
     jsonArray.push({
       title: $("#title").val()

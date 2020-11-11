@@ -11,16 +11,15 @@ class AddPasteControler extends Controller
     public function getData(Request $request)
     {
         try {
-            $DateCreated = date('Y-m-d H:i:s');
             $Data = $request->all();
-            $insert = new Paste();
-            $insert->text = $Data[0]['paste'];
-            $insert->title = $Data[1]['title'];
-            $insert->lang = $Data[2]['lang'];
-            $insert->DateOfExist = $DateCreated;
-            //$Data[3]['DateOfExist'];
-            $insert->access = $Data[4]['access'];
-            $insert->save();
+            $Paste = new Paste();
+            
+            $Data = $Paste->getData($Data);
+            
+            foreach($Data as $key => $val){
+                $Paste->$key = $val;
+            }
+            $Paste->save();
         } catch (\Illuminate\Database\QueryException $exception) {
             $errorInfo = $exception->errorInfo;
             return  $errorInfo;
