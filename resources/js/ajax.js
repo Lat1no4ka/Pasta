@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  
     $.ajax({
         headers: {
             "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
@@ -7,7 +8,6 @@ $(document).ready(function() {
         type: "POST",
         data: "test"
     }).then(function(result) {
-        console.log("result", result);
     });
 
     
@@ -34,7 +34,6 @@ $(document).ready(function() {
             data: jsonArray,
         }).then(function(result) {
             //document.location.reload();
-            console.log("result", result);
         });
 
     });

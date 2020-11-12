@@ -101,9 +101,7 @@ $(document).ready(function () {
     url: "/getPaste",
     type: "POST",
     data: "test"
-  }).then(function (result) {
-    console.log("result", result);
-  });
+  }).then(function (result) {});
   $("#sendPaste").on("click", function () {
     var jsonArray = [];
     jsonArray.push({
@@ -132,9 +130,7 @@ $(document).ready(function () {
       url: "/insertPaste",
       type: "POST",
       data: jsonArray
-    }).then(function (result) {
-      //document.location.reload();
-      console.log("result", result);
+    }).then(function (result) {//document.location.reload();
     });
   });
 });
