@@ -11,15 +11,7 @@ $(document).ready(function() {
     });
 
     
-    $("#title").on('input', function() {
-        if ($(this).val() != "") {
-            $("#sendPaste").prop('disabled', false);
-        }
-        else{
-            $("#sendPaste").prop('disabled', true);
-        }
-    });
-
+   
     $("#sendPaste").on("click", function() {
         let jsonArray = [];
         jsonArray.push({text:$(".input-paste").val()});
@@ -41,6 +33,7 @@ $(document).ready(function() {
             type: "POST",
             data: jsonArray,
         }).then(function(result) {
+            //document.location.reload();
             console.log("result", result);
         });
 

@@ -17,12 +17,12 @@ class CreatePastesTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('Email')->default('guest');
-            $table->string('Title');
-            $table->string('Text')->default('empty');
-            $table->string('Lang');
+            $table->string('Title')->default('untitled');
+            $table->longText('Text')->default('empty');
+            $table->string('Lang')->default('none');
             $table->boolean('Access')->default('0');
             $table->dateTime('DateOfExist');
-            $table->string('link')->default('none');
+            $table->string('link')->default('none')->unique();
         });
     }
 

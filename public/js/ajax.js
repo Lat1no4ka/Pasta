@@ -104,13 +104,6 @@ $(document).ready(function () {
   }).then(function (result) {
     console.log("result", result);
   });
-  $("#title").on('input', function () {
-    if ($(this).val() != "") {
-      $("#sendPaste").prop('disabled', false);
-    } else {
-      $("#sendPaste").prop('disabled', true);
-    }
-  });
   $("#sendPaste").on("click", function () {
     var jsonArray = [];
     jsonArray.push({
@@ -140,6 +133,7 @@ $(document).ready(function () {
       type: "POST",
       data: jsonArray
     }).then(function (result) {
+      //document.location.reload();
       console.log("result", result);
     });
   });

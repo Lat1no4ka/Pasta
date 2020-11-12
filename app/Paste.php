@@ -15,7 +15,7 @@ class Paste extends Model
     private $DateOfExist;
     private $link;
 
-  
+
     public function getData($req)
     {
         foreach ($req as $key => $val) {
@@ -24,7 +24,8 @@ class Paste extends Model
             }
         }
         $Data['DateOfExist'] = $this->getDateOfExist($Data['DateOfExist']);
-        $Data['link'] = $this->getLink($Data['title']);
+        $Data['link'] = $this->getLink();
+        $Data = $this->getTextandTitle($Data);
         return $Data;
     }
     public function AddIntoData($Data)
@@ -63,9 +64,19 @@ class Paste extends Model
     public function getAcces($Data)
     {
     }
-    public function getLink($Data)
+    public function getTextandTitle($Data)
     {
-        $link = Hash::make($Data . strtotime('now'));
+        if($Data['text'] == ""){
+            unset($Data['text']);
+        }
+        if($Data['title'] == ""){
+            unset($Data['title']);
+        }
+        return $Data;
+    }
+    public function getLink()
+    {
+        $link = md5(strtotime('now'));
         return $link;
     }
 }
