@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/','PasteController@loadPaste');
+Route::post('/getPaste','PasteController@loadPaste');
+Route::post('/insertPaste','PasteController@getData');
+Route::get('/Paste/{link}','PasteController@getPage')->name('showPaste');
