@@ -10,7 +10,9 @@ $(document).ready(function() {
     }).then(function(result) {
     });
 
-    
+    $("#register").on("click", function() {
+
+    });
    
     $("#sendPaste").on("click", function() {
         let jsonArray = [];

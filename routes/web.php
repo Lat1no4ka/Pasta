@@ -17,6 +17,7 @@ Route::get('/','PasteController@loadPaste');
 Route::post('/getPaste','PasteController@loadPaste');
 Route::post('/insertPaste','PasteController@getData');
 Route::get('/Paste/{link}','PasteController@getPage')->name('showPaste');
-//Auth::routes();
+Route::post('/register','Auth\RegisterController@create')->name('addUser');
+Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');

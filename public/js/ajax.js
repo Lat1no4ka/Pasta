@@ -102,6 +102,7 @@ $(document).ready(function () {
     type: "POST",
     data: "test"
   }).then(function (result) {});
+  $("#register").on("click", function () {});
   $("#sendPaste").on("click", function () {
     var jsonArray = [];
     jsonArray.push({
