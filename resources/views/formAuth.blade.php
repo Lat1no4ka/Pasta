@@ -9,7 +9,7 @@
 
                 @error('email')
                 <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
+                    <strong id="auth-error">{{ $message }}</strong>
                 </span>
                 @enderror
             </div>
@@ -19,7 +19,7 @@
 
                 @error('password')
                 <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
+                    <strong id="auth-error">{{ $message }}</strong>
                 </span>
                 @enderror
             </div>
@@ -27,6 +27,9 @@
                 <button type="submit" class="btn btn-primary">
                     {{ __('Login') }}
                 </button>
+            </div>
+            <div class="facebook">
+            <a href="{{ url('/login/facebook') }}" class="btn btn-facebook"> Facebook</a>
             </div>
         </form>
     </div>

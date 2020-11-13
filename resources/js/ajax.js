@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    
-
     $("#signin").on("click", function () {
         $(".signin").css("display", "block");
         $("body").css("overflow", "hidden");
@@ -12,9 +10,16 @@ $(document).ready(function () {
         }
     });
     $("#signup").on("click", function () {
-        $(".signup").css("display", "block");
-        $("body").css("overflow", "hidden");
+            $(".signup").css("display", "block");
+            $("body").css("overflow", "hidden");
+        
     });
+    if ($("#auth-error").text() != "") {
+        $(".signin").css("display", "block");
+    }
+    if ($("#reg-error").text() != "") {
+        $(".signup").css("display", "block");
+    }
     $(".signup").on("click", function (e) {
         if ($(e.target).hasClass("signup")) {
             $(".signup").css("display", "none");

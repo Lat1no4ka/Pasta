@@ -62,7 +62,7 @@
                     <div class="options"><label for="name">Syntax Highlighting: </label>
                         <select name="" id="lang">
                             <option value="none">None</option>
-                            <option value="JS">Js</option>
+                            <option value="JavaScript">JavaScript</option>
                             <option value="CSS">CSS</option>
                             <option value="PHP">PHP</option>
                         </select>

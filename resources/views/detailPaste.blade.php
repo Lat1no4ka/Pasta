@@ -27,7 +27,7 @@
                     <h3>{{$Data->Title}}</h3>
                     <div class="paste-container">
                         <div class="detail-text">
-                        <pre><code class="">{{$Data->Text}}</code></pre>
+                        <pre><code class="{{$Data->lang}}">{{$Data->Text}}</code></pre>
                         <textarea class="input-paste" name="" id="" cols="" rows="" readonly>{{$Data->Text}}</textarea>
                         </div>
                         <div class="show-paste">

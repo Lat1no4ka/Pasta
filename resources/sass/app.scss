@@ -172,10 +172,24 @@ main {
         border-radius: 10px;
         padding: 20px;
         text-align: center;
-
+        
         div {
             margin: 10px;
-
+            a{
+                border: none;
+                background-color: #0184bb;
+                width: 100px;
+                height: 40px;
+                margin: 10px 0;
+                cursor: pointer;
+                border-radius: 6px;
+                padding: 10px;
+                color: black;
+                text-decoration: none;
+                &:hover {
+                    box-shadow: 0 0 5px 1px;
+                } 
+            }
             button {
                 border: none;
                 background-color: $color;
@@ -189,6 +203,7 @@ main {
                     box-shadow: 0 0 5px 1px;
                 }
             }
+           
         }
     }
 }
@@ -212,7 +227,21 @@ main {
 
         div {
             margin: 10px;
-
+            a{
+                border: none;
+                background-color: #0184bb;
+                width: 100px;
+                height: 40px;
+                margin: 10px 0;
+                cursor: pointer;
+                border-radius: 6px;
+                padding: 10px;
+                color: black;
+                text-decoration: none;
+                &:hover {
+                    box-shadow: 0 0 5px 1px;
+                } 
+            }
             button {
                 border: none;
                 background-color: $color;

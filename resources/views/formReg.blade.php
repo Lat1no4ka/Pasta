@@ -7,7 +7,7 @@
                 <input id="name" type="text" class=" @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                 @error('name')
                 <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
+                    <strong id="reg-error">{{ $message }}</strong>
                 </span>
                 @enderror
             </div>
@@ -16,7 +16,7 @@
                 <input id="email" type="email" class=" @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                 @error('email')
                 <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
+                    <strong id="reg-error">{{ $message }}</strong>
                 </span>
                 @enderror
             </div>
@@ -26,7 +26,7 @@
 
                 @error('password')
                 <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
+                    <strong id="reg-error">{{ $message }}</strong>
                 </span>
                 @enderror
             </div>
@@ -37,9 +37,12 @@
                 </div>
             </div>
             <div class="reg-btn">
-                <button type="submit" class="">
+                <button type="submit" id="reg-btn" class="">
                     {{ __('Register') }}
                 </button>
+            </div>
+            <div class="facebook">
+            <a href="{{ url('/login/facebook') }}" class="btn btn-facebook"> Facebook</a>
             </div>
         </form>
     </div>

@@ -108,6 +108,15 @@ $(document).ready(function () {
     $(".signup").css("display", "block");
     $("body").css("overflow", "hidden");
   });
+
+  if ($("#auth-error").text() != "") {
+    $(".signin").css("display", "block");
+  }
+
+  if ($("#reg-error").text() != "") {
+    $(".signup").css("display", "block");
+  }
+
   $(".signup").on("click", function (e) {
     if ($(e.target).hasClass("signup")) {
       $(".signup").css("display", "none");
