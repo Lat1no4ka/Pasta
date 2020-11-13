@@ -10,22 +10,22 @@ $(document).ready(function () {
         }
     });
     $("#signup").on("click", function () {
-            $(".signup").css("display", "block");
-            $("body").css("overflow", "hidden");
-        
+        $(".signup").css("display", "block");
+        $("body").css("overflow", "hidden");
     });
-    if ($("#auth-error").text() != "") {
-        $(".signin").css("display", "block");
-    }
     if ($("#reg-error").text() != "") {
         $(".signup").css("display", "block");
+    } else if ($("#auth-error").text() != "") {
+        $(".signin").css("display", "block");
     }
+
     $(".signup").on("click", function (e) {
         if ($(e.target).hasClass("signup")) {
             $(".signup").css("display", "none");
             $("body").css("overflow", "scroll");
         }
     });
+
     $("#sendPaste").on("click", function () {
         let jsonArray = [];
         jsonArray.push({ text: $(".input-paste").val() });
@@ -51,13 +51,13 @@ $(document).ready(function () {
         });
     });
 
-    $('#editPasteEnable').on("click", function () {
-        $('#edit').css('display','block');
-        $(".input-paste").prop('readonly', false);
+    $("#editPasteEnable").on("click", function () {
+        $("#edit").css("display", "block");
+        $(".input-paste").prop("readonly", false);
     });
-    $('#editPaste').on("click", function () {
+    $("#editPaste").on("click", function () {
         let jsonArray = [];
-        jsonArray.push({ id: $("#id").val()});
+        jsonArray.push({ id: $("#id").val() });
         jsonArray.push({ text: $(".input-paste").val() });
         jsonArray.push({ title: $("#title").val() });
         jsonArray.push({ lang: $("#lang").val() });
@@ -78,7 +78,7 @@ $(document).ready(function () {
             data: jsonArray,
         }).then(function (result) {
             console.log(result);
-           // document.location.reload();
+            document.location.reload();
         });
     });
 });

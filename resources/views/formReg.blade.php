@@ -14,11 +14,7 @@
             <div>
                 <label for="email">Email</label>
                 <input id="email" type="email" class=" @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-                @error('email')
-                <span class="invalid-feedback" role="alert">
-                    <strong id="reg-error">{{ $message }}</strong>
-                </span>
-                @enderror
+               
             </div>
             <div>
                 <label for="password">Password</label>

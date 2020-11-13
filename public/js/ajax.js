@@ -109,12 +109,10 @@ $(document).ready(function () {
     $("body").css("overflow", "hidden");
   });
 
-  if ($("#auth-error").text() != "") {
-    $(".signin").css("display", "block");
-  }
-
   if ($("#reg-error").text() != "") {
     $(".signup").css("display", "block");
+  } else if ($("#auth-error").text() != "") {
+    $(".signin").css("display", "block");
   }
 
   $(".signup").on("click", function (e) {
@@ -155,11 +153,11 @@ $(document).ready(function () {
       document.location.reload();
     });
   });
-  $('#editPasteEnable').on("click", function () {
-    $('#edit').css('display', 'block');
-    $(".input-paste").prop('readonly', false);
+  $("#editPasteEnable").on("click", function () {
+    $("#edit").css("display", "block");
+    $(".input-paste").prop("readonly", false);
   });
-  $('#editPaste').on("click", function () {
+  $("#editPaste").on("click", function () {
     var jsonArray = [];
     jsonArray.push({
       id: $("#id").val()
@@ -191,7 +189,8 @@ $(document).ready(function () {
       type: "POST",
       data: jsonArray
     }).then(function (result) {
-      console.log(result); // document.location.reload();
+      console.log(result);
+      document.location.reload();
     });
   });
 });
