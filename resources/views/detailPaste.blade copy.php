@@ -54,9 +54,6 @@
         </div>
         @endif
         @else
-        @if($Data->Access == 2 && $Data->Email != Auth::user()->email )
-        <h1>Acces denied</h1>
-        @else
         <div class="container">
             <section>
                 <div>
@@ -87,7 +84,6 @@
                                 </a>
                             </div>
                             @endforeach
-                            <a class="all-page" href="/allPastes">Show all</a>
                         </div>
 
                     </div>

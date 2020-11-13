@@ -15,8 +15,9 @@ class User extends Authenticatable
      *
      * @var array
      */
+    // Provider for social auth
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'image', 'provider', 'provider_id', 'password',
     ];
 
     /**
@@ -36,4 +37,5 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
 }
