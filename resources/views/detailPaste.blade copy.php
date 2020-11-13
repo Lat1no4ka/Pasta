@@ -133,5 +133,6 @@
                 </div>
             </section>
         </div>
+        @endif
         @endguest
     </main>

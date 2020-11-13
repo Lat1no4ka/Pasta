@@ -20,6 +20,7 @@
         <div class="container">
             <section>
                 <div>
+
                     <h3>New Paste</h3>
 
                     <div class="paste-container">
@@ -48,6 +49,7 @@
                                 </a>
                             </div>
                             @endforeach
+                            <a href="/allPastes">Show all</a>
                         </div>
                         @endguest
                     </div>
@@ -81,6 +83,11 @@
                         <select name="" id="access">
                             <option value="0">public</option>
                             <option value="1">unlisted</option>
+                            @guest
+                            <option value="2" disabled>private</option>
+                            @else
+                            <option value="2" >private</option>
+                            @endguest
                         </select>
                     </div>
                 </div>

@@ -149,6 +149,24 @@ main .create-paste button:hover {
   box-shadow: 0 0 5px 1px;
 }
 
+.pagination {
+  display: flex;
+}
+
+.pagination li {
+  list-style: none;
+  margin: 10px;
+  border: solid 1px #c7c6c6;
+  width: 15px;
+  text-align: center;
+}
+
+.pagination .page-link {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+
 .signin {
   display: none;
   width: 100%;

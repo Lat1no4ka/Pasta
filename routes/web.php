@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/','PasteController@loadPaste');
-Route::post('/','PasteController@myPaste');
+Route::get('/allPastes','PasteController@myPaste');
 Route::post('/insertPaste','PasteController@getData');
+Route::post('/updatePaste','PasteController@updateData');
 Route::get('/Paste/{link}','PasteController@getPage')->name('showPaste');
 
 Route::get('login/{provider}', 'SocialController@redirect');

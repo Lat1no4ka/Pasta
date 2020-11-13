@@ -50,4 +50,35 @@ $(document).ready(function () {
             document.location.reload();
         });
     });
+
+    $('#editPasteEnable').on("click", function () {
+        $('#edit').css('display','block');
+        $(".input-paste").prop('readonly', false);
+    });
+    $('#editPaste').on("click", function () {
+        let jsonArray = [];
+        jsonArray.push({ id: $("#id").val()});
+        jsonArray.push({ text: $(".input-paste").val() });
+        jsonArray.push({ title: $("#title").val() });
+        jsonArray.push({ lang: $("#lang").val() });
+        jsonArray.push({ DateOfExist: $("#DateOfExist").val() });
+        jsonArray.push({ access: $("#access").val() });
+
+        jsonArray = JSON.stringify(jsonArray);
+        console.log(jsonArray);
+
+        $.ajax({
+            headers: {
+                "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            url: "/updatePaste",
+            type: "POST",
+            data: jsonArray,
+        }).then(function (result) {
+            console.log(result);
+           // document.location.reload();
+        });
+    });
 });

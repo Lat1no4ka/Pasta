@@ -30,7 +30,8 @@ header {
         align-items: center;
         height: 50px;
 
-        a,p {
+        a,
+        p {
             color: black;
             font-size: 18px;
             font-weight: 600;
@@ -56,6 +57,7 @@ main {
             .detail-text {
                 flex: 3;
                 margin-right: 20px;
+
                 .input-paste {
                     font-size: 13px !important;
                     padding: 10px 15px;
@@ -69,17 +71,18 @@ main {
                 }
 
             }
+
             .input-paste {
-              padding: 10px 15px;
-              font-size: 18px;
-              width: 100%;
-              flex: 3;
-              height: 450px;
-              border: 1px solid $color;
-              margin-right: 20px;
-              border-radius: 6px;
-              resize: none;
-          }
+                padding: 10px 15px;
+                font-size: 18px;
+                width: 100%;
+                flex: 3;
+                height: 450px;
+                border: 1px solid $color;
+                margin-right: 20px;
+                border-radius: 6px;
+                resize: none;
+            }
 
             .show-paste {
                 border-radius: 6px;
@@ -156,6 +159,25 @@ main {
     }
 }
 
+.pagination {
+    display: flex;
+
+    li {
+        list-style: none;
+        margin: 10px;
+        border: solid 1px $color ;
+        width: 15px;
+        text-align: center;
+    }
+
+    .page-link {
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+
+    }
+}
+
 .signin {
     display: none;
     width: 100%;
@@ -172,10 +194,11 @@ main {
         border-radius: 10px;
         padding: 20px;
         text-align: center;
-        
+
         div {
             margin: 10px;
-            a{
+
+            a {
                 border: none;
                 background-color: #0184bb;
                 width: 100px;
@@ -186,10 +209,12 @@ main {
                 padding: 10px;
                 color: black;
                 text-decoration: none;
+
                 &:hover {
                     box-shadow: 0 0 5px 1px;
-                } 
+                }
             }
+
             button {
                 border: none;
                 background-color: $color;
@@ -203,7 +228,7 @@ main {
                     box-shadow: 0 0 5px 1px;
                 }
             }
-           
+
         }
     }
 }
@@ -227,7 +252,8 @@ main {
 
         div {
             margin: 10px;
-            a{
+
+            a {
                 border: none;
                 background-color: #0184bb;
                 width: 100px;
@@ -238,10 +264,12 @@ main {
                 padding: 10px;
                 color: black;
                 text-decoration: none;
+
                 &:hover {
                     box-shadow: 0 0 5px 1px;
-                } 
+                }
             }
+
             button {
                 border: none;
                 background-color: $color;
