@@ -1,0 +1,378 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  outline-offset: 0;
+}
+
+*:active,
+* :hover,
+* :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  background-color: #4949da;
+}
+
+header .header-item {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+header .header-item a,
+header .header-item p {
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0 20px;
+}
+
+main section {
+  padding: 10px;
+  border: 1px solid #c7c6c6;
+}
+
+main section h3 {
+  margin: 10px 0;
+}
+
+main section .paste-container {
+  display: flex;
+}
+
+main section .paste-container .detail-text {
+  flex: 3;
+  margin-right: 20px;
+}
+
+main section .paste-container .detail-text .input-paste {
+  font-size: 13px !important;
+  padding: 10px 15px;
+  font-size: 18px;
+  margin-right: 10px;
+  height: 470px;
+  border: 1px solid #c7c6c6;
+  margin-right: 20px;
+  border-radius: 6px;
+  resize: none;
+}
+
+main section .paste-container .input-paste {
+  padding: 10px 15px;
+  font-size: 18px;
+  width: 100%;
+  flex: 3;
+  height: 470px;
+  border: 1px solid #c7c6c6;
+  margin-right: 20px;
+  border-radius: 6px;
+  resize: none;
+}
+
+main section .paste-container .show-paste {
+  border-radius: 6px;
+  flex: 1;
+  height: 470px;
+  border: 1px solid #c7c6c6;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+main section .paste-container .show-paste div {
+  display: block;
+  margin: 2px auto;
+  border: solid 1px #c7c6c6;
+  border-radius: 6px;
+  box-shadow: 0 0 5px 1px;
+  padding: 5px 10px;
+}
+
+main section .paste-container .show-paste div a {
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+}
+
+main section .paste-container input {
+  outline: none;
+  border: none;
+}
+
+main section .options {
+  margin: 10px 0;
+  font-size: 18px;
+  width: 600px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+main section select {
+  flex: 1;
+  height: 30px;
+  font-size: 14px;
+}
+
+main section input {
+  flex: 1;
+  height: 30px;
+  font-size: 14px;
+}
+
+main section label {
+  flex: 1;
+}
+
+main .create-paste button {
+  border: none;
+  background-color: #c7c6c6;
+  width: 150px;
+  height: 40px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+main .create-paste button:hover {
+  box-shadow: 0 0 5px 1px;
+}
+
+.all-page {
+  color: black;
+  font-weight: 16px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.pagination {
+  display: flex;
+}
+
+.pagination li {
+  list-style: none;
+  margin: 10px;
+  border: solid 1px #c7c6c6;
+  width: 15px;
+  text-align: center;
+}
+
+.pagination .page-link {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+
+.signin {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.24);
+}
+
+.signin .modal-form {
+  display: block;
+  width: 400px;
+  height: auto;
+  background-color: white;
+  margin: 200px auto;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.signin .modal-form div {
+  margin: 10px;
+}
+
+.signin .modal-form div a {
+  border: none;
+  background-color: #0184bb;
+  width: 100px;
+  height: 40px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.signin .modal-form div a:hover {
+  box-shadow: 0 0 5px 1px;
+}
+
+.signin .modal-form div button {
+  border: none;
+  background-color: #c7c6c6;
+  width: 100px;
+  height: 40px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.signin .modal-form div button:hover {
+  box-shadow: 0 0 5px 1px;
+}
+
+.signup {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.24);
+}
+
+.signup .modal-form {
+  display: block;
+  width: 400px;
+  height: auto;
+  background-color: white;
+  margin: 200px auto;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.signup .modal-form div {
+  margin: 10px;
+}
+
+.signup .modal-form div a {
+  border: none;
+  background-color: #0184bb;
+  width: 100px;
+  height: 40px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.signup .modal-form div a:hover {
+  box-shadow: 0 0 5px 1px;
+}
+
+.signup .modal-form div button {
+  border: none;
+  background-color: #c7c6c6;
+  width: 100px;
+  height: 40px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.signup .modal-form div button:hover {
+  box-shadow: 0 0 5px 1px;
+}
+
+/*
+Atom One Light by Daniel Gamage
+Original One Light Syntax theme from https://github.com/atom/one-light-syntax
+base:    #fafafa
+mono-1:  #383a42
+mono-2:  #686b77
+mono-3:  #a0a1a7
+hue-1:   #0184bb
+hue-2:   #4078f2
+hue-3:   #a626a4
+hue-4:   #50a14f
+hue-5:   #e45649
+hue-5-2: #c91243
+hue-6:   #986801
+hue-6-2: #c18401
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string {
+  color: #50a14f;
+}
+
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
