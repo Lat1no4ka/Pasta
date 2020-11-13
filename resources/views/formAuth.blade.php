@@ -1,4 +1,4 @@
-<div class="modal-window">
+<div class="signin">
     <div class="modal-form">
         <form method="POST" action="{{ route('login') }}">
             @csrf

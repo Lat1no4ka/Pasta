@@ -14,10 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/','PasteController@loadPaste');
-Route::post('/getPaste','PasteController@loadPaste');
+Route::post('/','PasteController@myPaste');
 Route::post('/insertPaste','PasteController@getData');
 Route::get('/Paste/{link}','PasteController@getPage')->name('showPaste');
+//Route::get('/MyPaste/{link}','PasteController@getMyPage')->name('showMyPaste');
 Route::post('/register','Auth\RegisterController@create')->name('addUser');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');

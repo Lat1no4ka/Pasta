@@ -1,4 +1,4 @@
-<div class="modal-window">
+<div class="signup">
     <div class="modal-form">
         <form method="POST" action="{{ route('register') }}">
             @csrf
@@ -31,9 +31,8 @@
                 @enderror
             </div>
             <div>
-                <label for="password-confirm">Confirm password</label>
-
                 <div>
+                    <label for="password-confirm">Confirm password</label>
                     <input id="password-confirm" type="password" name="password_confirmation" required autocomplete="new-password">
                 </div>
             </div>

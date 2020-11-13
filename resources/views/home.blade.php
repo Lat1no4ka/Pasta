@@ -21,15 +21,11 @@
             <section>
                 <div>
                     <h3>New Paste</h3>
-                    <div>
-                        @component('formReg')
-                        @endcomponent
-                        @component('formAuth')
-                        @endcomponent
-                    </div>
+
                     <div class="paste-container">
                         <textarea class="input-paste" name="" id="" cols="" rows=""></textarea>
                         <div class="show-paste">
+                            <p>All Paste</p>
                             @foreach($paste as $el)
                             <div>
                                 <a href="{{route('showPaste',['link' => $el->link])}}">
@@ -39,6 +35,21 @@
                             </div>
                             @endforeach
                         </div>
+                        @guest
+                        
+                        @else
+                        <div class="show-paste">
+                            <p>My Paste</p>
+                            @foreach($mypaste as $el)
+                            <div>
+                                <a href="{{route('showPaste',['link' => $el->link])}}">
+                                    <p>{{$el->Title }}</p>
+                                    <p>{{$el->Lang}}</p>
+                                </a>
+                            </div>
+                            @endforeach
+                        </div>
+                        @endguest
                     </div>
 
 

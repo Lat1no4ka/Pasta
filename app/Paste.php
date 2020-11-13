@@ -2,20 +2,12 @@
 
 namespace App;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Hash;
 
 class Paste extends Model
 {
-    private $email;
-    private $title;
-    private $text;
-    private $lang;
-    private $access;
-    private $DateOfExist;
-    private $link;
-
-
     public function getData($req)
     {
         foreach ($req as $key => $val) {
@@ -23,15 +15,18 @@ class Paste extends Model
                 $Data[$index] = $value;
             }
         }
+        $Data = $this->getEmail($Data);
         $Data['DateOfExist'] = $this->getDateOfExist($Data['DateOfExist']);
         $Data['link'] = $this->getLink();
         $Data = $this->getTextandTitle($Data);
         return $Data;
     }
-    public function AddIntoData($Data)
+    public function getEmail($Data)
     {
-        if (!key_exists('email', $Data)) {
+        if (Auth::check()) {
+            $Data['email'] = Auth::user()->email;
         }
+
         return $Data;
     }
     public function getDateOfExist($Data)
@@ -66,10 +61,10 @@ class Paste extends Model
     }
     public function getTextandTitle($Data)
     {
-        if($Data['text'] == ""){
+        if ($Data['text'] == "") {
             unset($Data['text']);
         }
-        if($Data['title'] == ""){
+        if ($Data['title'] == "") {
             unset($Data['title']);
         }
         return $Data;

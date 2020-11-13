@@ -26,9 +26,12 @@
                 <div>
                     <h3>{{$Data->Title}}</h3>
                     <div class="paste-container">
+                        <div class="detail-text">
                         <pre><code class="">{{$Data->Text}}</code></pre>
-                        <textarea class="input-paste" name="" id="" cols="" rows="" readonly></textarea>
+                        <textarea class="input-paste" name="" id="" cols="" rows="" readonly>{{$Data->Text}}</textarea>
+                        </div>
                         <div class="show-paste">
+                            <p>All Paste</p>
                             @foreach($paste as $el)
                             <div>
                                 <a href="{{route('showPaste',['link' => $el->link])}}">
@@ -38,6 +41,21 @@
                             </div>
                             @endforeach
                         </div>
+                        @guest
+                        
+                        @else
+                        <div class="show-paste">
+                            <p>My Paste</p>
+                            @foreach($mypaste as $el)
+                            <div>
+                                <a href="{{route('showPaste',['link' => $el->link])}}">
+                                    <p>{{$el->Title }}</p>
+                                    <p>{{$el->Lang}}</p>
+                                </a>
+                            </div>
+                            @endforeach
+                        </div>
+                        @endguest
                     </div>
 
 
