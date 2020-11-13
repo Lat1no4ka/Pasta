@@ -43,7 +43,6 @@
                                 <a href="{{route('showPaste',['link' => $el->link])}}">
                                     <p>{{$el->Title }}</p>
                                     <p>{{$el->Lang}}</p>
-                                    {{$el->Email}}
                                 </a>
                             </div>
                             @endforeach
