@@ -49,7 +49,7 @@
                                 </a>
                             </div>
                             @endforeach
-                            <a href="/allPastes">Show all</a>
+                            <a class="all-page" href="/allPastes">Show all</a>
                         </div>
                         @endguest
                     </div>

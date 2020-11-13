@@ -149,6 +149,13 @@ main .create-paste button:hover {
   box-shadow: 0 0 5px 1px;
 }
 
+.all-page {
+  color: black;
+  font-weight: 16px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 .pagination {
   display: flex;
 }
