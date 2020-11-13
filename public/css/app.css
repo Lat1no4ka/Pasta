@@ -63,7 +63,7 @@ main section .paste-container .detail-text .input-paste {
   padding: 10px 15px;
   font-size: 18px;
   margin-right: 10px;
-  height: 400px;
+  height: 470px;
   border: 1px solid #c7c6c6;
   margin-right: 20px;
   border-radius: 6px;
@@ -75,7 +75,7 @@ main section .paste-container .input-paste {
   font-size: 18px;
   width: 100%;
   flex: 3;
-  height: 450px;
+  height: 470px;
   border: 1px solid #c7c6c6;
   margin-right: 20px;
   border-radius: 6px;
@@ -85,7 +85,7 @@ main section .paste-container .input-paste {
 main section .paste-container .show-paste {
   border-radius: 6px;
   flex: 1;
-  height: 450px;
+  height: 470px;
   border: 1px solid #c7c6c6;
   margin-right: 10px;
   padding: 10px;
