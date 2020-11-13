@@ -87,6 +87,7 @@
                                 </a>
                             </div>
                             @endforeach
+                            <a class="all-page" href="/allPastes">Show all</a>
                         </div>
 
                     </div>
